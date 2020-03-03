@@ -15,3 +15,14 @@ variables:
 steps:
 - script: dotnet build --configuration $(buildConfiguration)
   displayName: 'dotnet build $(buildConfiguration)'
+
+
+  steps:
+    - task: UseDotNet@2
+      inputs:
+        version: '3.1'
+
+    - task: UseDotNet@2
+      inputs:
+        version: '3.1'
+        packageType: runtime
